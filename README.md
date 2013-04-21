@@ -1,5 +1,5 @@
 Exif Data Extraction for Jamroom 5
-=================
+==================================
 
 ujExif is a Jamroom 5 module which can extract exif data from uploaded photos, and optionally store it for other modules to use.
 
