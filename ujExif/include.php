@@ -40,6 +40,11 @@ function ujExif_init() {
     
     // Send trigger for listening modules to use the exif data
     jrCore_register_event_trigger('ujExif','extract_exif_data','Allows modules to hook into the exif data extraction and grab the data for their own nefarious purposes.');
+    
+    // Nice bootstrap docs 
+    jrCore_register_module_feature('ujBootstrap','docs','ujExif', true, '3.0.0');
+    // Add button link for the docs
+    jrCore_register_module_feature('jrCore','tool_view','ujExif','docs',array('ujExif Docs','Documentation for the ujExif module'));
 
     return true;
 }
@@ -53,7 +58,8 @@ function ujExif_init() {
 function ujExif_save_media_file_listener($_data,$_user,$_conf,$_args,$event)
 {
     // See if we are getting an image file upload...
-    if (isset($_conf['ujExif_save_exif']) && $_conf['ujExif_save_exif'] == 'on' && !empty($_conf['ujExif_save_modules'])) {
+//    if (isset($_conf['ujExif_save_exif']) && $_conf['ujExif_save_exif'] == 'on' && !empty($_conf['ujExif_save_modules'])) {
+    if (!empty($_conf['ujExif_save_modules'])) {
         $_modules = explode(',',$_conf['ujExif_save_modules']);
         if (!is_array($_modules)) {
             $_modules[] = $_conf['ujExif_save_modules'];

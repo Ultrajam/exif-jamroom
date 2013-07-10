@@ -184,19 +184,19 @@ It uses the GPS data from the photo to add a location to photos uploaded to jrGa
     <h1>Installation</h1>
 </div>
 
-<p>
-Upload the module to your server.
-</p>
-<p>
-Go to the module info tab in the admin control panel and enable it.
-</p>
+<ol>
+<li>Upload the module to your server.</li>
+<li>Go to the module info tab in the admin control panel and enable it.</li>
+<li>Enable ujExif for each module that you want to use Exif data by adding the module name to 'Image Modules' in ujExif config.</li>
+<li>If you want to save the full Exif data to the datastore for future use you can also enable that in config (Note: You almost certainly do not need to do this and should consider this a deprecated feature).</li>
+</ol>
 
 <br><br><br><br>
 <table>
   <tr>
     <td style="width:100%;vertical-align:top;padding:10px;border-right:1px solid #000000">
 
-      <p>The <b>ujExif</b> module is licensed under the same MIT License (MIT) as the xing editor. <br><a href="https://github.com/xing/wysihtml5/" target="_blank">https://github.com/xing/wysihtml5</a></p>
+      <p>The <b>ujExif</b> module is licensed under the MIT License (MIT)<br></p>
       <p>Jamroom license details: <a href="http://jamroom.net/" target="_blank">http://jamroom.net</a></p>
 
       <h1>The MIT License (MIT)</h1>

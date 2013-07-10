@@ -42,20 +42,6 @@ function ujExif_config()
     );
     jrCore_register_setting('ujExif',$_tmp);
 
-//------------------------------
-// Bootstrap Docs
-//------------------------------
-    // Bootstrap version
-    $_versions = ujBootstrap_get_versions();
-    $_tmp = array(
-        'name'     => 'bootstrap_version',
-        'label'    => 'bootstrap version',
-        'type'     => 'select',
-        'options'  => $_versions,
-        'default'  => '3.0.0',
-        'help'     => 'Select the bootstrap version to use as a base.'
-    );
-    jrCore_register_setting('ujExif',$_tmp);
     return true;
 }
-
+?>
