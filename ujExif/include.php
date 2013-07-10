@@ -17,7 +17,7 @@ function ujExif_meta() {
     $_tmp = array(
         'name'        => 'Exif',
         'url'         => 'exif',
-        'version'     => '0.7.0',
+        'version'     => '0.8.0',
         'developer'   => 'Ultrajam, &copy;' . strftime('%Y'),
         'description' => 'Provides photo Exif data extraction features to Jamroom.',
         'support'     => 'http://www.jamroom.net/phpBB2',

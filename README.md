@@ -1,12 +1,14 @@
 Exif Data Extraction for Jamroom 5
 ==================================
 
+v0.8.0-beta tested on Jamroom 5 Beta 9
+
 ujExif is a Jamroom 5 module which can extract exif data from uploaded photos, and optionally store it for other modules to use.
 
 It triggers a listener so your modules can grab and use the exif data during image upload/save.
 
 You can optionally select to save the full extracted exif data to the ujExif database table for specified modules.
-An exif_id is saved as an _image_exif field with the jrImage data so a large array doesn't encumber the image, yet can be retrieved whenever it is needed by other modules now or in the future.
+An exif_id is saved as an _image_exif field with the jrImage data so a large array doesn't encumber the image, yet can be retrieved whenever it is needed by other modules now or in the future. Note: You almost certainly do not want to do this, and this should be considered a deprecated feature).
 ##Example - ujGoogleMaps grabs lat/lng gps data
 
 ujGoogleMaps listens for exif data attached to photos uploaded to jrGallery.<br>
@@ -166,6 +168,10 @@ It uses the GPS data from the photo to add a location to photos uploaded to jrGa
 Upload the module to your server.
 
 Go to the module info tab in the admin control panel and enable it.
+
+Enable ujExif for each module that you want to use Exif data by adding the module name to 'Image Modules' in ujExif config.
+
+If you want to save the full Exif data to the datastore for future use you can also enable that in config (Note: You almost certainly do not need to do this and should consider this a deprecated feature).
 
 ## License 
 MIT
